@@ -1,6 +1,6 @@
 from bs4 import BeautifulSoup
 
-class COVID19Scrapper():
+class COVID19Scraper():
 
     def __init__(self):
 

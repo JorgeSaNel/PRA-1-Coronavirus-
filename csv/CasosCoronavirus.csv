@@ -1,0 +1,234 @@
+Paises;Continente;Casos Positivos;CxM Habitantes;Fallecidos;Porcentaje Fallecidos;FxM Habitantes;Recuperados;Porcentaje Recuperados
+Estados Unidos(1);América;427 101;1291,7;14 668;3.4 %;44,4;22 314;5.2 %
+España(2);Europa;146 690;3108,5;14 792;10.1 %;313,5;48 021;32.7 %
+Italia;Europa;139 422;2320,2;17 669;12.7 %;294;26 491;19 %
+Francia(3);Europa;112 950;1740,9;10 869;9.6 %;167,5;21 254;18.8 %
+Alemania;Europa;110 483;1327,3;2183;2 %;26,2;36 081;32.7 %
+China;Asia;81 802;58,2;3333;4.1 %;2,4;77 279;94.5 %
+Irán;Asia;64 586;774,7;3993;6.2 %;47,9;29 812;46.2 %
+Reino Unido(4);Europa;60 733;906,1;7097;11.7 %;105,9;135;0.2 %
+Turquía;Europa y Asia;38 226;466,2;812;2.1 %;9,9;1846;4.8 %
+Bélgica;Europa;23 403;2031,5;2240;9.6 %;194,4;4681;20 %
+Suiza;Europa;23 248;2703,3;893;3.8 %;103,8;9800;42.2 %
+Países Bajos(5);Europa;20 549;1182,3;2248;10.9 %;129,3;250;1.2 %
+Canadá;América;19 179;506,2;427;2.2 %;11,3;4474;23.3 %
+Brasil;América;14 347;68,5;719;5 %;3,4;127;0.9 %
+Portugal;Europa;13 141;1277,1;380;2.9 %;36,9;196;1.5 %
+Austria;Europa;12 930;1452,8;273;2.1 %;30,7;4512;34.9 %
+Corea del Sur;Asia;10 384;200,8;200;1.9 %;3,9;6776;65.3 %
+Israel;Asia;9404;1079,7;73;0.8 %;8,4;801;8.5 %
+Rusia(6);Europa y Asia;8672;59,1;63;0.7 %;0,4;580;6.8 %
+Suecia;Europa;8522;825,8;695;8.2 %;67,3;333;3.9 %
+Noruega;Europa;6086;528,3;89;1.5 %;7,7;32;0.5 %
+Australia;Oceanía;6013;244,4;50;0.8 %;2;2813;46.8 %
+India;Asia;5916;4,2;178;3 %;0,1;506;8.6 %
+Irlanda;Europa;5709;1182;210;3.7 %;43,5;25;0.4 %
+Chile;América;5546;307,3;48;0.9 %;2,4;1115;20.1 %
+Dinamarca(7);Europa;5402;928,2;218;4 %;37,5;1621;30 %
+República Checa;Europa;5221;490,2;99;1.9 %;9,3;233;4.5 %
+Polonia;Europa;5205;135,6;159;3.1 %;4,1;222;4.3 %
+Rumania;Europa;4761;245,4;215;4.5 %;11,1;528;11.1 %
+Ecuador;América;4450;254,9;242;5.4 %;13,9;140;3.1 %
+Perú;América;4342;134,4;121;2.8 %;3,7;1301;30 %
+Japón;Asia;4257;33,6;93;2.2 %;0,7;622;14.6 %
+Pakistán;Asia;4196;18,9;60;1.4 %;0,3;467;11.1 %
+Malasia;Asia;4119;130,3;65;1.6 %;2,1;1487;36.1 %
+Filipinas;Asia;3870;35,5;182;4.7 %;1,7;96;2.5 %
+Arabia Saudita;Asia;3122;90,2;41;1.3 %;1,2;631;20.2 %
+Luxemburgo;Europa;3034;4893,5;46;1.5 %;74,2;500;16.5 %
+Indonesia;Asia;2956;11;240;8.1 %;0,9;222;7.5 %
+México;América;2785;21,8;141;5.1 %;1;633;22.7 %
+Serbia(9);Europa;2666;387,5;65;2.4 %;9,4;118;4.4 %
+Emiratos Árabes Unidos;Asia;2659;268,9;12;0.5 %;1,2;239;9 %
+Finlandia(8);Europa;2487;449,7;40;1.6 %;7,2;300;12.1 %
+Tailandia;Asia;2369;34,3;30;1.3 %;0,4;888;37.5 %
+Panamá;América;2249;529,2;59;2.6 %;13,9;16;0.7 %
+Catar;Asia;2210;27;6;0.3 %;0,1;178;8.1 %
+República Dominicana;América;2111;203;108;5.1 %;10,4;36;1.7 %
+Grecia;Europa;1884;175,7;83;4.4 %;7,7;269;14.3 %
+Sudáfrica;África;1845;31,1;18;1 %;0,3;95;5.1 %
+Colombia;América;1780;35,7;50;2.8 %;1;100;5.6 %
+Argentina;América;1715;38;63;3.7 %;1,4;338;19.7 %
+Ucrania(10);Europa;1668;39,2;52;3.1 %;1,2;35;2.1 %
+Singapur;Asia;1623;283,2;6;0.4 %;1;406;25 %
+Islandia;Europa;1616;4488,9;6;0.4 %;16,7;633;39.2 %
+Argelia;África;1572;35,9;205;13 %;4,7;237;15.1 %
+Egipto;África;1560;15,6;103;6.6 %;1;305;19.6 %
+Croacia;Europa;1343;326,8;19;1.4 %;4,6;179;13.3 %
+Marruecos;África;1275;35,6;93;7.3 %;2,6;97;7.6 %
+Nueva Zelanda;Oceanía;1210;241;1;0.1 %;0,2;282;23.3 %
+Irak;Asia;1202;30,5;69;5.7 %;1,8;452;37.6 %
+Estonia;Europa;1185;897,7;24;2 %;18,2;72;6 %
+Moldavia(11);Europa;1174;448,1;27;2.3 %;10,3;40;3.4 %
+Eslovenia;Europa;1091;522;40;3.7 %;19,1;120;11 %
+Bielorrusia;Europa;1066;113,3;13;1.2 %;1,4;77;7.2 %
+Hong Kong(RAE);Asia;961;128,1;4;0.4 %;0,5;264;27.5 %
+Lituania;Europa;912;326,9;15;1.6 %;5,4;8;0.9 %
+Hungría;Europa;895;91,7;58;6.5 %;5,9;94;10.5 %
+Armenia;Asia;881;298,6;9;1 %;3,1;114;12.9 %
+Kuwait;Asia;855;190,4;1;0.1 %;0,2;111;13 %
+Baréin;Asia;823;520,9;5;0.6 %;3,2;477;58 %
+Azerbaiyán;Asia;822;81,6;8;1 %;0,8;63;7.7 %
+Bosnia y Herzegovina;Europa;803;244,1;34;4.2 %;10,3;79;9.8 %
+Kazajistán;Asia;727;39;7;1 %;0,4;54;7.4 %
+Crucero Diamond Princess;;712;191 862;11;1.5 %;2964;619;86.9 %
+Camerún;África;685;27,8;9;1.3 %;0,4;60;8.8 %
+Eslovaquia;Europa;682;124,9;2;0.3 %;0,4;16;2.3 %
+Túnez;;623;52,8;23;3.7 %;2;25;4 %
+Puerto Rico(U);América;620;194,4;24;3.9 %;7,5;4;0.6 %
+Macedonia del Norte;;617;296,6;29;4.7 %;13,9;35;5.7 %
+Bulgaria;Europa;593;85,3;24;4 %;3,5;42;7.1 %
+Letonia;Europa;577;303,7;2;0.3 %;1,1;16;2.8 %
+Líbano;Asia;576;84,5;19;3.3 %;2,8;62;10.8 %
+Andorra;Europa;564;7230,8;23;4.1 %;294,9;52;9.2 %
+Uzbekistán;Asia;545;16;3;0.6 %;0,1;30;5.5 %
+Chipre(12);;526;597,7;9;1.7 %;10,2;52;9.9 %
+Costa Rica;América;502;98,8;2;0.4 %;0,4;24;4.8 %
+Cuba;América;457;40,8;12;2.6 %;1,1;27;5.9 %
+Afganistán;;444;13,6;14;3.2 %;0,4;29;6.5 %
+Uruguay;América;424;120,5;7;1.7 %;2;150;35.4 %
+Omán;;419;89,9;2;0.5 %;0,4;72;17.2 %
+Burkina Faso;;414;19,5;23;5.6 %;1,1;134;32.4 %
+Albania;;400;140,4;22;5.5 %;7,7;154;38.5 %
+Taiwán(ERL);;379;15,9;5;1.3 %;0,2;67;17.7 %
+Reunión(U);;358;411,5;0;0 %;0;40;11.2 %
+Jordania;Asia;358;33,4;6;1.7 %;0,6;150;41.9 %
+Costa de Marfil;África;349;13,3;3;0.9 %;0,1;41;11.7 %
+Ghana;África;313;10,2;6;1.9 %;0,2;34;10.9 %
+Honduras;América;312;33,8;22;7.1 %;2,4;6;1.9 %
+Malta;;299;586,3;0;0 %;0;5;1.7 %
+San Marino;;279;8205,9;34;12.2 %;1000;40;14.3 %
+Níger;África;278;12,2;11;4 %;0,5;26;9.4 %
+Mauricio;;273;215;7;2.6 %;4,7;19;7 %
+Kirguistán;;270;41,4;4;1.5 %;0,6;33;12.2 %
+Palestina(ERL);Ásia;263;52,2;1;0.4 %;0,2;44;16.7 %
+Nigeria;África;254;1,2;6;2.4 %;0;44;17.3 %
+Vietnam;Asia;251;2,6;0;0 %;0;123;49 %
+Montenegro;;248;400;2;0.8 %;3,2;4;1.6 %
+Senegal;África;244;15,1;2;0.8 %;0,1;113;46.3 %
+Bangladés;Asia;218;1,2;20;9.2 %;0,1;33;15.1 %
+Bolivia;América;210;18,1;15;7.1 %;1,3;2;1 %
+Georgia(13);;208;55,9;3;1.4 %;0,8;50;24 %
+Sri Lanka;Asia;189;8,6;7;3.7 %;0,3;44;23.3 %
+Kosovo(14)(ERL);;184;102,8;5;2.7 %;2,8;30;16.3 %
+Islas Feroe(U);;184;3538,5;0;0 %;0;131;71.2 %
+Guernsey(15)(U);;181;2784,6;5;2.8 %;76,9;38;21 %
+República Democrática del Congo;África;180;2;18;10 %;0,2;9;5 %
+Kenia;África;179;3,7;6;3.4 %;0,1;9;5 %
+USS Theodore Roosevelt;;173;;0;0 %;;0;0 %
+Mayotte(U);;171;610,7;2;1.2 %;7,1;22;12.9 %
+Jersey(U);;170;1545,5;3;1.8 %;27,3;0;0 %
+Venezuela;América;166;5,1;7;4.2 %;0,2;65;39.2 %
+Isla de Man(U);Europa;158;1903,6;1;0.6 %;12;82;51.9 %
+Martinica(U);;152;410,8;4;2.6 %;10,8;50;32.9 %
+Guinea;;144;11,7;0;0 %;0;5;3.5 %
+Guadalupe(U);;139;356,4;7;5 %;17,9;31;22.3 %
+Brunéi;;135;300;1;0.7 %;2,2;85;63 %
+Yibuti;;135;123,9;0;0 %;0;25;18.5 %
+Greg Mortimer;;128;;0;0 %;;0;0 %
+Gibraltar(U);;120;3529,4;0;0 %;0;60;50 %
+Paraguay;América;119;16,5;5;4.2 %;0,7;15;12.6 %
+Camboya;Asia;117;7,6;0;0 %;0;63;53.8 %
+Guam(U);;112;658,8;4;3.6 %;23,5;23;20.5 %
+Ruanda;;110;8,8;0;0 %;0;7;6.4 %
+Trinidad y Tobago;América;107;78,7;8;7.5 %;5,9;1;0.9 %
+El Salvador;América;93;11,6;5;5.1 %;0,6;9;11.5 %
+Madagascar;;93;3,4;0;0 %;0;11;11.8 %
+Chipre del Norte(ERL);;91;284,4;2;2.2 %;3,1;29;31.9 %
+Guatemala;América;87;5,2;3;3.4 %;0,2;17;19.5 %
+Mónaco;Europa;81;2076,9;1;1.2 %;25,6;4;4.9 %
+Liechtenstein;;78;2000;1;1.3 %;25,6;55;70.5 %
+Guayana Francesa(U);América;77;256,7;0;0 %;0;34;44.2 %
+Aruba(U);;74;672,7;0;0 %;0;14;18.9 %
+Togo;;70;9,2;3;4.3 %;0,4;23;32.9 %
+Barbados;;63;217,2;3;4.8 %;10,3;6;9.5 %
+Jamaica;América;63;2,3;3;4.8 %;0,1;10;15.9 %
+Malí;;59;2,9;7;11.9 %;0,3;16;27.1 %
+Etiopía;África;55;0,6;2;3.6 %;0;4;7.3 %
+Uganda;África;53;1,3;0;0 %;0;0;0 %
+Transnistria(ERL);;47;100;3;6.4 %;6,4;0;0 %
+Polinesia Francesa(U);;47;167,9;0;0 %;0;0;0 %
+República del Congo;África;45;8,3;5;11.1 %;0,9;2;4.4 %
+Islas Caimán(U);;45;671,6;1;2.2 %;14,9;6;13.3 %
+MS River Anuket;;45;;0;0 %;;0;0 %
+Macao(RAE);;45;66,2;0;0 %;0;10;22.2 %
+Islas Vírgenes(U);;43;430;1;2.3 %;10;34;79.1 %
+San Martín (Países Bajos)(U);;40;930,2;6;15 %;139,5;1;2.5 %
+Bermudas(U);América;39;609,4;2;5.1 %;31,3;17;43.6 %
+Zambia;;39;2,2;1;2.6 %;0;7;17.9 %
+Bahamas;;36;92,3;6;16.7 %;15,4;5;13.9 %
+Guyana;América;33;41,8;5;15.2 %;6,3;8;24.2 %
+Guinea-Bisáu;;33;20,4;0;0 %;0;0;0 %
+San Martín (Francia)(U);;32;888,9;2;6.3 %;55,6;7;21.9 %
+Eritrea;;31;8,8;0;0 %;0;0;0 %
+Liberia;África;31;6,8;4;12.9 %;0,9;3;9.7 %
+Gabón;;30;13,5;1;3.3 %;0,5;1;3.3 %
+Benín;;26;2,2;1;3.8 %;0,1;5;19.2 %
+Haití;América;25;2,1;1;4 %;0,1;0;0 %
+Tanzania;Oceanía;25;0,4;1;4 %;0;5;20 %
+Birmania;;22;0,4;3;13.6 %;0,1;0;0 %
+Crucero Grand Princess;;21;;2;9.5 %;;0;0 %
+Libia;África;21;3,1;1;4.8 %;0,1;2;9.5 %
+Siria;Asia;19;1,1;2;10.5 %;0,1;3;15.8 %
+Antigua y Barbuda;América;19;193,9;2;10.5 %;20,4;0;0 %
+Maldivas;;19;50;0;0 %;0;13;68.4 %
+Nueva Caledonia(U);;18;66,7;0;0 %;0;1;5.6 %
+Angola;;17;0,5;2;11.8 %;0,1;2;11.8 %
+Mozambique;África;17;0,6;0;0 %;0;1;5.9 %
+Guinea Ecuatorial;;16;11,2;0;0 %;0;3;18.8 %
+Namibia;África;16;6,5;0;0 %;0;3;18.8 %
+Mongolia;Asia;16;5,1;0;0 %;0;4;25 %
+Dominica;América;15;208,3;0;0 %;0;1;6.7 %
+Fiyi;;15;16,9;0;0 %;0;0;0 %
+Laos;Asia;15;2,1;0;0 %;0;0;0 %
+Sudán;;14;0,3;2;14.3 %;0;2;14.3 %
+Santa Lucía;;14;77,8;0;0 %;0;1;7.1 %
+Curazao(U);;13;81,3;1;7.7 %;6,3;7;53.8 %
+Crucero Coral Princess;;12;4176,8;3;25 %;1044,2;0;0 %
+Granada;;12;109,1;0;0 %;0;0;0 %
+Suazilandia;;12;10,8;0;0 %;0;7;58.3 %
+Somalia(16);África;12;0,8;1;8.3 %;0,1;1;8.3 %
+Crucero MS Zaandam;;11;;2;18.2 %;;0;0 %
+Zimbabue;África;11;0,7;2;18.2 %;0,1;0;0 %
+Groenlandia(U);;11;196,4;0;0 %;0;11;100 %
+San Cristóbal y Nieves;;11;207,5;0;0 %;0;0;0 %
+Seychelles;;11;112,2;0;0 %;0;0;0 %
+Surinam;América;10;17,2;1;10 %;1,7;0;0 %
+Acrotiri y Dhekelia;;10;625;0;0 %;0;0;0 %
+Chad;;10;0,6;0;0 %;0;2;20 %
+Nepal;Asia;9;0,3;0;0 %;0;1;11.1 %
+Åland(U);;9;300;0;0 %;0;0;0 %
+Montserrat(U);;9;1800;0;0 %;0;0;0 %
+Malaui;;8;19,5;1;12.5 %;2,4;0;0 %
+Islas Turcas y Caicos(U);;8;181,8;1;12.5 %;22,7;0;0 %
+Islas Marianas del Norte(U);;8;137,9;1;12.5 %;17,2;0;0 %
+República Centroafricana;;8;1,4;0;0 %;0;0;0 %
+San Vicente y las Granadinas;;8;72,7;0;0 %;0;1;12.5 %
+Belice;;7;17,1;1;14.3 %;2,4;0;0 %
+Cabo Verde;;7;12,7;1;14.3 %;1,8;1;14.3 %
+Ciudad del Vaticano;Europa;7;7000;0;0 %;0;0;0 %
+Sierra Leona;África;7;0,9;0;0 %;0;0;0 %
+Botsuana;;6;2,5;1;16.7 %;0,4;0;0 %
+Mauritania;;6;1,5;1;16.7 %;0;2;33.3 %
+Nicaragua;América;6;0,9;1;16.7 %;0,2;0;0 %
+San Bartolomé(U);;6;600;0;0 %;0;1;16.7 %
+Bután;Asia;5;6,7;0;0 %;0;2;40 %
+Islas Malvinas(U)(TD);América;5;1250;0;0 %;0;1;20 %
+República Popular de Donetsk(ERL);;5;2,2;0;0 %;0;0;0 %
+Gambia;;4;1,7;1;25 %;0,4;2;50 %
+Sahara Occidental;África;4;6,9;0;0 %;0;0;0 %
+República Popular de Lugansk(ERL);;4;2,7;0;0 %;0;0;0 %
+Santo Tomé y Príncipe;;4;19;0;0 %;0;0;0 %
+Anguila(U);;3;200;0;0 %;0;0;0 %
+Burundi;;3;0,3;0;0 %;0;0;0 %
+Islas Vírgenes Británicas(U);;3;100;0;0 %;0;0;0 %
+San Eustaquio(U);;2;625;0;0 %;0;0;0 %
+Somalilandia(ERL);;2;0,6;0;0 %;0;0;0 %
+Papúa Nueva Guinea;Asia;2;0,1;0;0 %;0;0;0 %
+Sudán del Sur;África;2;0,2;0;0 %;0;0;0 %
+Base Naval de Guantánamo(TD);;1;;0;0 %;;0;0 %
+Timor Oriental;;1;0,7;0;0 %;0;0;0 %
+Abjasia(ERL);;1;4;0;0 %;0;0;0 %
+Artsaj(ERL);;1;4;0;0 %;0;0;0 %
+Isla de Pascua(U);Oceanía;1;129,9;0;0 %;0;0;0 %
+San Pedro y Miquelón(U);;1;166,7;0;0 %;0;0;0 %

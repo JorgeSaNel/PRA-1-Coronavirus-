@@ -34,7 +34,7 @@ class COVID19Scraper():
                     texto_inicial = th[0].text.strip('\n')
 
                     # Analizando el código HTML, se observa que se puede empezar a coger datos cuando se cumple esta condición
-                    if (texto_inicial == '233 territorios o transportes'):
+                    if texto_inicial.find('territorios o transportes') > 0:
                         start = True
                         continue
                     elif (texto_inicial == '#'):

@@ -7,7 +7,7 @@
 import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
+from urllib2 import urlopen
 
 
 # In[2]:
@@ -77,7 +77,7 @@ def GuardarFichero(dataframe, ruta, nombre_fichero):
     if not os.path.exists(ruta):
         os.makedirs(ruta)
 
-    dataframe.to_csv (ruta + nombre_fichero, index = True, header=True, sep=";")
+    dataframe.to_csv(ruta + nombre_fichero, index=True, header=True, sep=";", encoding='utf-8')
 
 
 # In[4]:
@@ -90,6 +90,14 @@ def ObtenerCasosCoronavirus(url):
     # Se recupera la tabla de casos del Coronavirus
     return ObtenerDataframeCoronavirus(soup)
 
+def CambiarCodificacionFicheroCoronavirus(dataframe):
+
+    for col in dataframe.columns:
+        dataframe[col] = dataframe[col].str.encode('utf-8')
+
+    return dataframe
+
+
 
 # In[7]:
 
@@ -99,5 +107,6 @@ ruta = "../csv/"
 url = 'https://es.wikipedia.org/wiki/Pandemia_de_enfermedad_por_coronavirus_de_2019-2020'
 
 df_coronavirus = ObtenerCasosCoronavirus(url)
+df_coronavirus = CambiarCodificacionFicheroCoronavirus(df_coronavirus)
 GuardarFichero(df_coronavirus, ruta, nombre_fichero)
 

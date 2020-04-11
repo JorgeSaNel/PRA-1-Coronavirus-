@@ -7,7 +7,8 @@
 import numpy as np
 import pandas as pd
 from bs4 import BeautifulSoup
-from urllib.request import urlopen
+from urllib2 import urlopen
+
 
 
 # In[2]:
@@ -50,10 +51,11 @@ def ObtenerDatos(soup, ID, columns):
 
                     # Se asignan valores
                     country = cells[0].text.replace(" [+]", "")
+
                     annio = cells[1].text
-                    euro = cells[2].text.replace("M.€", "").replace("€", "")#.replace(".", "")
-                    dolar = cells[4].text.replace("M.$", "").replace("$", "")#.replace(".", "")
-                    variacion = cells[6].text
+                    euro = cells[2].attrs['data-value']#.text.replace("M.€", "").replace("€", "")#.replace(".", "")
+                    dolar = cells[4].attrs['data-value']#.text.replace("M.$", "").replace("$", "")#.replace(".", "")
+                    variacion = cells[6].attrs['data-value']#.text
 
                     # Se insertan los valores recogidos en el dataframe
                     df2 = pd.DataFrame([[country, annio, euro, dolar, variacion]], columns=columns)
@@ -72,31 +74,37 @@ def GuardarFichero(dataframe, ruta, nombre_fichero):
     if not os.path.exists(ruta):
         os.makedirs(ruta)
 
-    dataframe.to_csv (ruta + nombre_fichero, index = True, header=True, sep=";")
+    dataframe.to_csv(ruta + nombre_fichero, index=True, header=True, sep=";", encoding='utf-8')
 
 
 # In[4]:
 
 
 def ObtenerDataframePIB(url):
-    html = urlopen(url) 
+    html = urlopen(url)
     soup = BeautifulSoup(html, 'html.parser')
 
     # Se recupera la tabla PIB Anual
-    columns_anual = ["Paises", "Año", "PIB Anual (M.€)", "PIB Anual (M.$)", "Var PIB Anual"]
+    columns_anual = ["Paises", "Anio", "PIB Anual (M.E)", "PIB Anual (M.D)", "Var PIB Anual"]
     df_anual = ObtenerDatos(soup, "tbA", columns_anual)
 
     # Se recupera la tabla PIB Per Capita
-    columns_per_capita = ["Paises", "Año", "PIB Per Capita (€)", "PIB Per Capita ($)", "Var PIB Per Capita"]
+    columns_per_capita = ["Paises", "Anio", "PIB Per Capita (E)", "PIB Per Capita (D)", "Var PIB Per Capita"]
     df_per_capita = ObtenerDatos(soup, "tbPC", columns_per_capita)
 
     # Merges entre los DataFrames
-    df_final = pd.merge(df_anual, df_per_capita, left_index=True, right_index=True)
+    df_final = pd.merge(df_anual, df_per_capita, left_index=True, right_index=True)[['Anio_x','PIB Anual (M.E)','PIB Anual (M.D)','Var PIB Anual','PIB Per Capita (E)','PIB Per Capita (D)','Var PIB Per Capita']]
     return df_final
 
     # TO-DO: Analizar Canada porque hay duplicados, aunque igual se hace en la PRA 2
     # df_final.filter(like='nad', axis=0)
 
+def CambiarCodificacionFicheroPIB(dataframe):
+
+    for col in dataframe.columns:
+        dataframe[col] = dataframe[col].str.encode('utf-8')
+
+    return dataframe
 
 # In[5]:
 
@@ -106,5 +114,6 @@ ruta = "../csv/"
 url = 'https://datosmacro.expansion.com/pib'
 
 df_pib = ObtenerDataframePIB(url)
+df_pib = CambiarCodificacionFicheroPIB(df_pib)
 GuardarFichero(df_pib, ruta, nombre_fichero)
 

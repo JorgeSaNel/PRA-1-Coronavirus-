@@ -67,6 +67,8 @@ class COVID19Scraper():
                         df = df.append(df2)
 
         df = df.set_index("Paises")
+        df.index = df.index.str.replace('[\(\[].*?[\)\]]', '')
+
         return df
 
     def ObtenerDataframeCoronavirus(self):

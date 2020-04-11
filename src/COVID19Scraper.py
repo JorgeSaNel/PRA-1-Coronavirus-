@@ -1,4 +1,5 @@
-from bs4 import BeautifulSoup
+#!/usr/bin/env python
+# coding: utf-8
 
 import pandas as pd
 import os
@@ -126,8 +127,8 @@ class COVID19Scraper():
         df = df.set_index("Paises")
         return df
 
-    def ObtenerDataframePIB(self, url):
-        html = urlopen(url)
+    def ObtenerDataframePIB(self):
+        html = urlopen(self.urlPIB)
         soup = BeautifulSoup(html, 'html.parser')
 
         # Se recupera la tabla PIB Anual

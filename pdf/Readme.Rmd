@@ -3,6 +3,10 @@ title: "Readme"
 author: "Jorge Santos Neila & Javier Cela Lopez"
 date: "11 de abril de 2020"
 output:
+  pdf_document:
+    highlight: zenburn
+    toc: yes
+  word_document: default
   html_document:
     highlight: default
     number_sections: yes
@@ -11,10 +15,6 @@ output:
     toc_depth: 2
     includes:
       in_header: 75.584-PEC-header.html
-  word_document: default
-  pdf_document:
-    highlight: zenburn
-    toc: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -23,70 +23,110 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ******
 # Descripción
-El conjunto de datos generado como parte de esta actividad práctica reúne diferentes características de accidentes de avión ocurridos a nivel mundial entre los años 1920 y 2017. Algunas de las variables que se recogen en el conjunto de datos son la fecha, la hora, la localización, el número de pasajeros o el de fallecidos.
+Esta práctica se ha realizado bajo el contexto de la asignatura Tipología y ciclo de vida de los datos, perteneciente al Máster en Ciencia de Datos de la Universitat Oberta de Catalunya. En ella, se aplican técnicas de web scraping mediante el lenguaje de programación Python para extraer información relevante al coronavirus a través de Wikipedia - Pandemia de enfermedad por coronavirus de 2019-2020 y del PIB de cada país con el periódico "Expansión" para generar un dataset para que en posterioridad se busquen correlaciones entre estos datos.
 
 ******
 # Imagen identificativa
 
+Para ilustrar el conjunto de datos y dar una visión general de lo que pretendemos investigar con la formación del mismo, ofrecemos a continuación una primera representación de los datos de fallecidos por la pandemia del COVID-19 y el PIB per cápita de los países analizados. Éste último es un buen indicador de la riqueza de un país, por lo que podemos analizar qué influencia tiene la capacidad económica de un país a la hora de evitar muertes por ésta enfermedad. Escogeremos para ello una pequeña muestra de países representativos.
+
+```{r message= FALSE, warning=FALSE}
+
+library(ggplot2)
+
+Coronavirus = read.csv("Coronavirus.csv", sep=";")
+
+df = Coronavirus[Coronavirus$Paises == c("Estados Unidos", "España", "Italia", "Francia", "Alemania", "China", "Reino Unido", "Suiza", "Chile", "India"), c("Paises", "Casos.Positivos", "Fallecidos", "PIB.Per.Capita..D.")]
+
+df$Paises <- as.character(df$Paises)
+
+df$Paises[df$Paises == "Estados Unidos"] = "USA"
+df$Paises[df$Paises == "España"] = "ESP"
+df$Paises[df$Paises == "Italia"] = "ITA"
+df$Paises[df$Paises == "Francia"] = "FRA"
+df$Paises[df$Paises == "Alemania"] = "GER"
+df$Paises[df$Paises == "China"] = "CHN"
+df$Paises[df$Paises == "Reino Unido"] = "UK"
+df$Paises[df$Paises == "Suiza"] = "SUI"
+df$Paises[df$Paises == "Chile"] = "CHL"
+df$Paises[df$Paises == "India"] = "IND"
+
+fallecidos = df[order(df$PIB.Per.Capita..D.),]$Fallecidos
+positivos = df[order(df$PIB.Per.Capita..D.),]$Casos.Positivos
+paises = df[order(df$PIB.Per.Capita..D.),]$Paises
+
+barplot(100 * fallecidos / positivos, main="Fallecidos por país", xlab="País", ylab="Porcentaje de fallecidos", names.arg=paises)
+
+```
+
+Ordenando los países por PIB per cápita, nos damos cuenta de que la mayor mortalidad se encuentra en países cuyo PIB per cápita es medio, siendo los países en los extremos más efectivos a la hora de evitar las muertes. Indudablemente, ésto merecería una mayor profundidad en el estudio para determinar los factores verdaderamente influyentes.
+
 ******
 # Contexto
 
-Como se ha comentado, la materia del conjunto de datos se corresponde con accidentes de avión que han tenido lugar durante el último siglo en todo el mundo. Entre ellos pueden encontrarse accidentes de aviación de todo tipo: desde helicópteros militares o de transporte hasta aviones comerciales de pasajeros, pasando por todos aquellos que efectuaban maniobras de entrenamiento.
+El contexto de los datos extraídos es el de la pandemia que vivimos actualmente a fecha de abril de 2020. Encontramos datos de muchos países distintos de todo el mundo. Los datos recogidos también corresponden a variables económicas que puede resultar influyentes.
+
 
 ******
 # Contenido
 
-Para cada accidente, el cual se corresponde con un registro en el conjunto de datos, se recogen las siguientes características:
+Para cada país, el cual se corresponde con un registro en el conjunto de datos, se recogen las siguientes características:
 
-* **Date**: día en el que tuvo lugar el accidente en el formato dd/mm/aaa.  
-* **Time**: hora del accidente en formato de 24 horas.  
-* **Location**: lugar del accidente.  
-* **Latitude**: coordenada geográfica correspondiente a la latitud obtenida a partir de la localización y la librería *Geopy*.  
-* **Longitude**: coordenada geográfica correspondiente a la longitud obtenida a partir de la localización y la librería *Geopy*.  
-* **Operator**: nombre de la aerolínea o compañía de vuelos propietaria del avión o aviones involucrados en el accidente.  
-* **Flight#**: número del vuelo.  
-* **Route**: ruta prevista por los aviones implicados.  
-* **ACType**: tipo de avión.  
-* **Registration**: registro ICAO (International Civil Aviation Organization) del avión.  
-* **cn/ln**: construcción o número de serie/línea o número de fuselaje.  
-* **Aboard**: número total de personas a bordo (pasajeros + tripulación).  
-* **Fatalities**: número de víctimas mortales.  
-* **Ground**: número de fallecidos en tierra.  
-* **Summary**: resumen del accidente.  
-* **Reason**: causa del accidente. Constituye una categoría que se ha asignado en base al resumen aplicando técnicas de minería de textos (*Text Mining*).
+* **Continente**: continente al cuál pertenece el país en formato cadena de texto. Se utilizará más adelante para agrupar datos.
+* **Casos.Positivos**: número de casos registrados en el país en cuestión.  
+* **CxM.Habitantes**: proporción del número de casos positivos por cada millón de habitantes.  
+* **Fallecidos**: número total de fallecidos.  
+* **Porcentaje.Fallecidos**: porcentaje de fallecidos con respecto al total de casos registrados.  
+* **FxM.Habitantes**: proporción del número de fallecidos por cada millón de habitantes.  
+* **Recuperados#**: número de pacientes recuperados de la enfermedad.  
+* **Porcentaje.Recuperados**: porcentaje de pacientes recuperados con respecto al total de casos registrados.  
+* **Anio_x**: año al que pertenecen los datos.  
+* **PIB.Anual..M.E.**: PIB anual del país en cuestión expresado en euros.  
+* **PIB.Anual..M.D.**: PIB anual del país en cuestiób expresado en dólares.  
+* **Var.PIB.Anual**: variación porcentual del PIB anual con respecto al año anterior.  
+* **PIB.Per.Capita..E.**: PIB per cápita del país en cuestión expresado en euros.  
+* **PIB.Per.Capita..D.**: PIB per cápita del país en cuestión expresado en dólares.  
+* **Var.PIB.Per.Capita**: variación porcentual del PIB per cápita con respecto al año anterior.  
 
-Los autores de la web *PlaneCrashInfo* llevan recopilando información sobre estos accidentes desde el año 1997. Como fuentes de información utilizadas (listadas en este enlace: http://www.planecrashinfo.com/reference.htm) destacan periódicos, revistas y libros, entre otros.
+Estos datos han sido obtenidos de dos páginas distintas y después cruzados para formar el dataset completo. No se ha realizado ningún procesamiento de los datos, se trata de los valore crudos extraídos de la web.
 
 ******
 # Agradecimientos
 
-Los datos han sido recolectados desde la base de datos online [PlaneCrashInfo](http://www.planecrashinfo.com/database.htm). Para ello, se ha hecho uso del lenguaje de programación Python y de técnicas de *Web Scraping* para extraer la información alojada en las páginas HTML.
+Los datos extraídos para la formación del dataset provienen de tablas publicadas en las webs de [expansión](https://datosmacro.expansion.com/pib) y [wikipedia](https://es.wikipedia.org/wiki/Pandemia_de_enfermedad_por_coronavirus_de_2019-2020). Hemos utilizado técnicas de *web scraping* valiéndonos del lenguaje Python. Para ello, se ha analizado la estructura HTML de las páginas en cuestión y se han extraído únicamente los datos que resultaban interesantes para la construcción del dataset.
+
 
 ******
 # Inspiración
 
-El presente conjunto de datos podría utilizarse en ámbitos muy diversos. Uno de ellos podría ser en el periodístico, en el que disponer de los datos de la gran mayoría de accidentes de avión acontecidos en la historia podría valer para sacar a relucir aquellos que puedan resultar más interesante de cara a la realización de un reportaje.
+Como es bien sabido, la situación en la que nos encontramos a fecha de abril de 2020 es muy complicada. Está en la conciencia de la sociedad en general el hacer lo posible para ayudar a superar este obstáculo. Es por eso que hemos elegido esta temática para realizar la práctica. Idealmente, el conjunto de datos servirá para presentar información correcta y actualizada a las personas que quieran disponer de ella para cualquier uso, ya sea actualmente para mantenerse informada o en el futuro para realizar análisis sobre los sucesos que tuvieron lugar estos días. Si se diera una situación similar en el futuro, el análisis de los datos del caso que os ocupa podría utilizarse para guiar la estrategia a seguir.
 
-También podría ser de gran utilidad en el campo de la *minería de datos*, a la hora de elaborar modelos predictivos (como por ejemplo árboles de decisión o redes neuronales). Así, se podría querer elaborar un modelo que permita predecir el número de víctimas mortales que podría ocasionar un avión en caso de accidente dadas las características del vuelo.
 
 ******
 # Licencia
 
-La licencia escogida para la publicación de este conjunto de datos ha sido **CC BY-SA 4.0 License**. Los motivos que han llevado a la elección de esta licencia tienen que ver con la idoneidad de las cláusulas que esta presenta en relación con el trabajo realizado:
+Este proyecto está bajo la licencia **CC BY-NC-SA 4.0, Atribución-NoComercial-CompartirIgual 4.0 Internacional**, la cual permite:
 
-* *Se debe proveer el nombre del creador del conjunto de datos generado, indicando los cambios que se han realizado*. De esta manera, se reconoce el trabajo ajeno y en qué medida se han realizado aportaciones en relación con el trabajo original.
+* *Compartir*: copiar y redistribuir el material en cualquier medio o formato
+* *Adaptar*: remezclar, transformar y construir a partir del material
 
-* *Se permite un uso comercial*. Esto haría que incrementen las probabilidades de que una empresa utilice los datos generados y realicen trabajos de calidad que reporten cierto reconocimiento al autor original.
+Siempre y cuando se sigan los siguientes términos:
 
-* *Las contribuciones realizadas a posteriori sobre el trabajo publicado bajo esta licencia deberán distribuirse bajo la misma*. Esto hace que el trabajo del autor original continúe distribuyéndose bajo los términos que él mismo planteó.
+* *Atribución*: Se debe dar crédito de manera adecuada, brindar un enlace a la licencia, e indicar si se han realizado cambios. Puede hacerlo en cualquier forma razonable, pero no de forma tal que sugiera que usted o su uso tienen el apoyo del licenciante.
+* *Sin uso comercial*: No puede hacer uso del material con propósitos comerciales.
+* *Compartir por igual*: Si remezcla, transforma o crea a partir del material, debe distribuir su contribución bajo la misma licencia del original.
 
 ******
 # Código fuente y dataset
 
-Tanto el código fuente escrito para la extracción de datos como el dataset generado pueden ser accedidos a través de [este enlace](https://github.com/tteguayco/Web-scraping).
+Tanto el código fuente escrito para la extracción de datos como el dataset generado pueden ser accedidos a través de [este enlace](https://github.com/JorgeSaNel/PRA-1-Coronavirus-). Asimismo, se puede encontrar información adicional en [Zenodo](https://zenodo.org/record/3749003#.XpM7pshLjIU).
 
 ******
 # Recursos
 
-1. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data  
-2. Mitchel, R. (2015). Web Scraping with Python: Collecting Data from the Modern Web. O'Reilly Media, Inc. Chapter 1. Your First Web Scraper.
+1. Pandemia de enfermedad por coronavirus de 2019-2020 (2020)
+2. Datos del PIB Per Cápita Mundial (2019)
+3. Subirats, L., Calvo, M. (2018). Web Scraping. Editorial UOC.
+4. Masip, D. El lenguaje Python. Editorial UOC.
+5. Lawson, R. (2015). Web Scraping with Python. Packt Publishing Ltd. Chapter 2. Scraping the Data.
+6. Simon Munzert, Christian Rubba, Peter Meißner, Dominic Nyhuis. (2015). Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. John Wiley & Sons

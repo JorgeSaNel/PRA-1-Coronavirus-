@@ -154,12 +154,19 @@ class COVID19Scraper():
 
         return dataframe
 
+    def FormatoFichero(self, dataframe):
+
+        dataframe['Casos Positivos'] = dataframe['Casos Positivos'].str.replace('\xc2\xa0', '').str.replace(' ', '')
+        dataframe['Fallecidos'] = dataframe['Fallecidos'].str.replace('\xc2\xa0', '')
+
+        return dataframe
+
     def ObtenerDataframeCompleto(self):
 
         df_coronavirus = self.ObtenerDataframeCoronavirus()
         df_pib = self.ObtenerDataframePIB()
 
-        return self.CodificacionFichero(pd.merge(df_coronavirus, df_pib, how='inner', on='Paises'))
+        return self.FormatoFichero(self.CodificacionFichero(pd.merge(df_coronavirus, df_pib, how='inner', on='Paises')))
 
     def GuardarFichero(self, dataframe, ruta, nombre_fichero):
         # Se comprueba si existe el directorio CSV para guardar el fichero

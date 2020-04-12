@@ -1,7 +1,7 @@
 ---
 title: "Readme"
-author: "Jorge Santos Neila & Javier Cela Lopez"
-date: "11 de abril de 2020"
+author: "Autor: Jorge Santos Neila & Javier Cela Lopez"
+date: "Abril 2020"
 output:
   pdf_document:
     highlight: zenburn

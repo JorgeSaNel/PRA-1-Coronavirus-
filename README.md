@@ -27,7 +27,7 @@ Siempre y cuando se sigan los siguientes términos:
 * Compartir por igual: Si remezcla, transforma o crea a partir del material, debe distribuir su contribución bajo la misma licencia del original. 
 
 ## DOI - Zenodo
-Asimismo, se puede encontrar información adicional en [Zenodo](https://zenodo.org/badge/latestdoi/253267502)
+Asimismo, se puede encontrar información adicional en [Zenodo](https://doi.org/10.5281/zenodo.3749286)
 
 ## Recursos
 

@@ -156,8 +156,9 @@ class COVID19Scraper():
 
     def FormatoFichero(self, dataframe):
 
-        dataframe['Casos Positivos'] = dataframe['Casos Positivos'].str.replace('\xc2\xa0', '').str.replace(' ', '')
+        dataframe['Casos Positivos'] = dataframe['Casos Positivos'].str.replace('\xc2\xa0', '')
         dataframe['Fallecidos'] = dataframe['Fallecidos'].str.replace('\xc2\xa0', '')
+        dataframe['Recuperados'] = dataframe['Recuperados'].str.replace('\xc2\xa0', '')
 
         return dataframe
 
